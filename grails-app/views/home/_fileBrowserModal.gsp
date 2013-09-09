@@ -3,6 +3,7 @@
 <g:javascript src="jqueryFileTree/jqueryFileTree.js"/>
 <link href="js/jqueryFileTree/jqueryFileTree.css" rel="stylesheet" type="text/css" media="screen"/>
 <link href="css/fileTree.css" rel="stylesheet" type="text/css" media="screen"/>
+<link href="css/booststrap.css" rel="stylesheet" type="text/css" media="screen"/>
 <script type="text/javascript">
     $(document).ready(
             function()
