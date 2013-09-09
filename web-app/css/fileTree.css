@@ -1,0 +1,12 @@
+.fileTree
+{
+    width:          200px;
+    height:         300px;
+    border-top:     solid 1px #BBBBBB;
+    border-left:    solid 1px #BBBBBB;
+    border-right:   solid 1px #FFFFFF;
+    border-bottom:  solid 1px #FFFFFF;
+    background:     #FFFFFF;
+    overflow:       scroll;
+    padding:        5px;
+}
