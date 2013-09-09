@@ -13,6 +13,21 @@
 <html>
 <head>
     <title><g:message code="default.index.title"/></title>
+    <g:javascript src="jquery-1.10.2.js"/>
+    <g:javascript src="QueryString.js"/>
+    <script type="text/javascript">
+        $(document).ready(
+            function()
+            {
+                var params = getQueryParams();
+
+                if(typeof(params.fileName) !== "undefined")
+                {
+                    $("#txtFileName").value = params.fileName;
+                }
+            }
+        )
+    </script>
 </head>
 <body>
 

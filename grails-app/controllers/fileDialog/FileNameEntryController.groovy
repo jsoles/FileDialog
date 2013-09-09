@@ -40,9 +40,14 @@ class FileNameEntryController
 
         flash.message = msg;
 
-        redirect(
-                uri:        params.responseUrl,
-                params:     params
-        )
+        def fileName = fileNameEntry.fileName
+        def txtFileName = fileNameEntry.fileName
+        def isDirectory = fileNameEntry.isDirectory
+
+        def responseUrl = params.responseUrl +
+                "?fileName=${fileName}" +
+                "&isDirectory=${isDirectory}"
+
+        redirect(uri: responseUrl)
     }
 }
