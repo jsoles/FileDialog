@@ -35,7 +35,7 @@
                 <g:message code="default.index.file.name"/>
             </label>
             <div class="controls">
-                <g:textField name="txtFileName" value=""/>
+                <g:textField name="txtFileName" value="${fileNameEntry?.fileName}"/>
             </div>
 
         </div>

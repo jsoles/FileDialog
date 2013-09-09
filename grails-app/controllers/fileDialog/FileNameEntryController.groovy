@@ -11,7 +11,7 @@ class FileNameEntryController
 
     def index()
     {
-        redirect(action: "index", params: params)
+        redirect(view: "/", params: params)
     }
 
     def save()
@@ -20,9 +20,9 @@ class FileNameEntryController
 
         def fileNameEntry = new FileNameEntry(params);
 
-        msg = message(
+        def msg = message(
                     code:       "default.index.fileName.message",
-                    args:       [fileNameEntry.fileName]
+                    args:       fileNameEntry.fileName
         ) + "\n"
 
         if(fileNameEntry.isDirectory)
@@ -38,12 +38,10 @@ class FileNameEntryController
             )
         }
 
-        flash.message = msg
-
-        def targetUri = request.forwardURI - request.contextPath;
+        flash.message = msg;
 
         redirect(
-                uri:        targetUri,
+                uri:        params.responseUrl,
                 params:     params
         )
     }

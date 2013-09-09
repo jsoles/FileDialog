@@ -24,6 +24,7 @@
 </script>
 <div id="fileBrowser" class="modal hide fade in">
     <g:form method="post" controller="FileNameEntry" action="save">
+        <input type="hidden" name="responseUrl" value="${request.forwardURI - request.contextPath}"/>
         <div class="modal-header">
             <a type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</a>
 
@@ -51,7 +52,8 @@
 
         <div class="modal-footer">
             <a class="btn" data-dismiss="modal">Close</a>
-            <g:actionSubmit
+            <input
+                type="submit"
                 class="btn btn-success"
                 value="${message(code: 'default.fileTree.confirm', default: 'Create')}"/>
         </div>

@@ -2,5 +2,7 @@
 
 class HomeController {
 
-    def index() { }
+    def index()
+    {
+    }
 }
