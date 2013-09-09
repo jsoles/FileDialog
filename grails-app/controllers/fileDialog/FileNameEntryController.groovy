@@ -14,8 +14,10 @@ class FileNameEntryController
         redirect(action: "index", params: params)
     }
 
-    def confirm()
+    def save()
     {
+        params.fileName = params.txtDialogFileName
+
         def fileNameEntry = new FileNameEntry(params);
 
         msg = message(
@@ -38,8 +40,10 @@ class FileNameEntryController
 
         flash.message = msg
 
+        def targetUri = request.forwardURI - request.contextPath;
+
         redirect(
-                action:     "index",
+                uri:        targetUri,
                 params:     params
         )
     }

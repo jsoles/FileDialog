@@ -25,23 +25,23 @@
         <g:message code="default.index.welcome"/>
     </p>
     <h2>
-        <g:message code="default.index.fileTree.name"/>
+        <g:message code="default.fileTree.name"/>
     </h2>
 
     <g:form method="post" class="form-horizontal">
 
         <div class="control-Group">
-            <label for="FileName" class="control-label">
+            <label for="txtFileName" class="control-label">
                 <g:message code="default.index.file.name"/>
             </label>
             <div class="controls">
-                <g:textArea name="FileName" value="" class="span6" rows="10"/>
+                <g:textField name="txtFileName" value=""/>
             </div>
 
         </div>
 
-        <a href="#fileBrowser" role="button" class="btn btn-success btn-small" data-toggle="modal">
-            <i class="icon-download"><g:message code="default.fileTree.name"/></i>
+        <a href="#fileBrowser" role="button" class="btn btn-success btn-large" data-toggle="modal" aria-hidden="false">
+            <i><g:message code="default.index.file.button.name"/></i>
         </a>
 
     </g:form>
